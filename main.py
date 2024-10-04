@@ -1,8 +1,8 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, Response
 
 app = FastAPI()
 
 @app.get("/ping")
 def health_check():
-    return "healthy"
+    return Response(content="healthy", status_code=200)
 
